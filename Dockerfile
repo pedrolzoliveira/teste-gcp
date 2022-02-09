@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:alpine
 
 WORKDIR /app
 
@@ -7,7 +7,6 @@ COPY server.js /app/
 
 RUN yarn install
 
-EXPOSE ${PORT}
+EXPOSE 80
 
 CMD ["node", "server.js"]
-
